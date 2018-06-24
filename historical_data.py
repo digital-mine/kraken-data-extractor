@@ -42,8 +42,8 @@ while last>current:
 	e=2
 	for i in list_all:
 		if p==x:
-			price.append(i)
 			file.write(i+'\n')
+			price.append(i)
 			p+=3
 		if v==x:
 			file.write(i+'\n')
