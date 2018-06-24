@@ -5,11 +5,13 @@ import time
 import datetime
 
 current=0
-
+file=open('last.txt','r')
 all=urllib.request.urlopen('https://api.kraken.com/0/public/Trades?pair=XXBTZEUR').read()
 list_all=re.findall("-?\d+\.?\d*",str(all))
 last=int(list_all[-1])
 print (last)
+file.write(last)
+file.close()
 price =[]
 volume =[]
 when= []
