@@ -4,7 +4,17 @@ import re
 import time
 import datetime
 
-current=0
+###
+file=open('last.txt','r')#should create this file before running the program for the first time
+###
+
+num=file.read()
+if num=='':
+	current=0
+else:
+	num=num.replace('\n','')
+	current=num
+file.close()
 file=open('last.txt','r')
 all=urllib.request.urlopen('https://api.kraken.com/0/public/Trades?pair=XXBTZEUR').read()
 list_all=re.findall("-?\d+\.?\d*",str(all))
