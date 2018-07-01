@@ -69,4 +69,15 @@ print ((three)/(delta/604800),'% per week')
 print ((three)/(delta/2592000),'% per month')
 print ((three)/(delta/31104000),'% per year')
 os.rename('new_trades_small.txt','trades_.txt')
+
+if len(num)>=300000:
+	print ('si', len(num))
+	file=open('trades.txt','a')
+	for i in num:
+		file.write(i)
+	#print (i)
+	file.close()
+	file=open('trades_.txt','w')
+	file.close()
+
 print (time.time()-start)
