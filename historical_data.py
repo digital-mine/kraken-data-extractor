@@ -15,11 +15,14 @@ else:
 	num=num.replace('\n','')
 	current=num
 file.close()
-file=open('last.txt','r')
 all=urllib.request.urlopen('https://api.kraken.com/0/public/Trades?pair=XXBTZEUR').read()
 list_all=re.findall("-?\d+\.?\d*",str(all))
-last=int(list_all[-1])
+try:
+	last=int(list_all[-1])
+except Exception as e:
+	exit()
 print (last)
+file=open('last.txt','w')
 file.write(last)
 file.close()
 price =[]
