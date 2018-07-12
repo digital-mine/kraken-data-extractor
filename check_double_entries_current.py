@@ -71,7 +71,7 @@ print ((three)/(delta/31104000),'% per year')
 os.rename('new_trades_small.txt','trades_.txt')
 
 if len(num)>=300000:
-	print ('si', len(num))
+	print ("I'm writing", len(num))
 	file=open('trades.txt','a')
 	for i in num:
 		file.write(i)
