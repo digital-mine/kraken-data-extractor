@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 
 start=time.time()
-file=open('new_trades.txt','r')
+file=open('trades.txt','r')
 num=file.readlines()
 file.close()
 
@@ -53,9 +53,9 @@ while len(num)>0:
 	
 	
 print ('NEW GROUP',len(allt_))	
-file=open('new_trades.txt', 'w')
+file=open('trades.txt', 'w')
 file.close()
-file=open('new_trades.txt', 'a')
+file=open('trades.txt', 'a')
 x=300000
 while len(allt_)>0:
 	for i in allt_[:x]:
