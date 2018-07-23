@@ -8,3 +8,5 @@ The data are saved with 3 entries:
   -DATE
 
 This is useful to chek for patterns in the trade history, and to create graphs
+
+PLEASE READ THE DOCUMENTATION FOR PRATICAL USAGE HERE https://github.com/digital-mine/kraken-data-extractor/wiki
