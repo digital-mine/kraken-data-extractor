@@ -28,7 +28,8 @@ file.close()
 price =[]
 volume =[]
 when= []
-file=open('trades.txt','a')
+file=open('trades.txt','a')#change this line with the one below after the first run!
+#file=open('trades_.txt','a')
 while last>current:
 	try:
 		all=urllib.request.urlopen('https://api.kraken.com/0/public/Trades?pair=XXBTZEUR&since='+str(current)).read()
